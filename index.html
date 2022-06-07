@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Site Tesla avec Bootstrap 5</title>
+  <title>Site Tesla avec Bootstrap 5</title><link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css'>
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css'>
 
 </head>
@@ -53,7 +53,15 @@
     
     <nav>
      <!-- ICI : fil d'ariane -->
-      
+      <ul class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Accueil</a>
+        </li>
+
+        <li class="breadcrumb-item">
+          Maintenenace
+        </li>
+      </ul>
     </nav>
     
   </div>
@@ -67,12 +75,26 @@
     
     <!-- ICI : les cartes --> 
     
-    <div>
-      <img src="https://believemy.com/uploads/c7fe8837368024dc01e1845337f167e9_18fb807dabb97a3e4f920d1b0c9176b1.png" alt="...">
+    <div class="card mb-3 bg-secondary text-white">
+      <img src="https://believemy.com/uploads/c7fe8837368024dc01e1845337f167e9_18fb807dabb97a3e4f920d1b0c9176b1.png" alt="..."
+      class="card-img-top">
+
+      <div class="card-body">
+        <h5 class="card-title">Nouveauté</h5>
+        <p class="card-text">Vous pourez bientôt acheter des fusées pour aller à la lune </p>
+      </div>
     </div>
     
-    <div>
-      <img src="https://believemy.com/uploads/c7fe8837368024dc01e1845337f167e9_18fb807dabb97a3e4f920d1b0c9176b1.png" alt="...">
+    
+    <div class="card mb-3 bg-secondary text-white">
+      <img src="https://believemy.com/uploads/c7fe8837368024dc01e1845337f167e9_18fb807dabb97a3e4f920d1b0c9176b1.png" alt="..."
+      class="card-img-top">
+
+      <div class="card-header">Information</div>
+      <div class="card-body">
+        <h5 class="card-title">Nouveauté</h5>
+        <p class="cart-text">Les 30 premiers acheteurs de fusées partirons avec Elon Musk.</p>
+      </div>
     </div>
       
   </div>
@@ -80,10 +102,25 @@
 </section>
 
 <!-- TROISIEME SECTION -->
-<section>
-  <div style="width: 400px">
+<section class="bg-dark text-white p-5">
+  <div class="mx-auto" style="width: 400px">
     <h2>Contactez-nous</h2>
     <!-- ICI : formulaire -->
+
+    <form>
+      <p>
+        <label for="email">Adresse email</label>
+        <input name="email" type="email"id="email" class="form-control" placeholder="Entrer votre adresse email">
+        <small class="text-muted">Nous ne partagerons pas votre adresse email.</small>
+      </p>
+
+      <p>
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="5" class="form-control"></textarea>
+      </p>
+      
+      <button type="submit" class="btn btn-outline-light mt-3">Soumettre</button>
+    </form>
   </div>
 </section>
 
